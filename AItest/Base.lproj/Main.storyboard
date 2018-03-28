@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AItest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrM-xr-UIk">
+                                <rect key="frame" x="191" y="589" width="62" height="30"/>
+                                <state key="normal" title="ピクチャ"/>
+                                <connections>
+                                    <action selector="btnPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XPr-ke-hms"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eEA-8i-R8c">
+                                <rect key="frame" x="0.0" y="20" width="375" height="385"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EAO-8p-3rY">
+                                <rect key="frame" x="0.0" y="436" width="375" height="125"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="0At-yc-oib"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBi-X1-2R5">
+                                <rect key="frame" x="119" y="589" width="46" height="30"/>
+                                <state key="normal" title="カメラ"/>
+                                <connections>
+                                    <action selector="btnCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZC1-MB-fa8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DrM-xr-UIk" firstAttribute="leading" secondItem="DBi-X1-2R5" secondAttribute="trailing" constant="26" id="2Kh-4b-dWD"/>
+                            <constraint firstItem="EAO-8p-3rY" firstAttribute="top" secondItem="eEA-8i-R8c" secondAttribute="bottom" constant="31" id="8SF-qG-awf"/>
+                            <constraint firstItem="eEA-8i-R8c" firstAttribute="trailing" secondItem="EAO-8p-3rY" secondAttribute="trailing" id="DGO-Wc-HuU"/>
+                            <constraint firstItem="DBi-X1-2R5" firstAttribute="top" secondItem="EAO-8p-3rY" secondAttribute="bottom" constant="28" id="FXV-TO-x8C"/>
+                            <constraint firstItem="eEA-8i-R8c" firstAttribute="leading" secondItem="EAO-8p-3rY" secondAttribute="leading" id="Gkf-dF-FDK"/>
+                            <constraint firstAttribute="trailing" secondItem="eEA-8i-R8c" secondAttribute="trailing" id="SA8-H9-Avj"/>
+                            <constraint firstItem="eEA-8i-R8c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UkX-Om-hwJ"/>
+                            <constraint firstItem="eEA-8i-R8c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bRM-9h-DYH"/>
+                            <constraint firstItem="DBi-X1-2R5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="l2b-N4-l4p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DBi-X1-2R5" secondAttribute="bottom" constant="48" id="mOe-fF-Msh"/>
+                            <constraint firstItem="DBi-X1-2R5" firstAttribute="baseline" secondItem="DrM-xr-UIk" secondAttribute="baseline" id="yQh-ag-T6D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myImage" destination="eEA-8i-R8c" id="Pg2-ut-hW9"/>
+                        <outlet property="myText" destination="EAO-8p-3rY" id="EVs-I9-jUa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="130.88455772113943"/>
+        </scene>
+    </scenes>
+</document>
